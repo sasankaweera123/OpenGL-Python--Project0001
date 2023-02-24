@@ -48,6 +48,7 @@ def window_resize(window, width, height):
     projection = pyrr.matrix44.create_perspective_projection_matrix(45, width / height, 0.1, 100)
     glUniformMatrix4fv(proj_loc, 1, GL_FALSE, projection)
 
+
 # initializing glfw library
 if not glfw.init():
     raise Exception("glfw can not be initialized!")
@@ -130,7 +131,7 @@ glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, vertices.itemsize * 5, ctypes.c_
 texture = glGenTextures(3)
 
 cube1_texture = load_texture("IMG/crate.jpg", texture[0])
-cube2_texture = load_texture("IMG/metal.jpg", texture[1])
+cube2_texture = load_texture("IMG/xtreme.jpg", texture[1])
 cube3_texture = load_texture("IMG/my.jpg", texture[2])
 
 glUseProgram(shader)
